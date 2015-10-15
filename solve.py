@@ -18,3 +18,6 @@ def solve_for_eccentric_anomaly(M,e,accuracy=0.000001):
 
 def solve_for_mean_anomaly(E,e):
     return E-e*math.sin(E)
+
+def solve_for_hyperbolic_mean_anomaly(H,e):
+    return e*math.sinh(H)-H
