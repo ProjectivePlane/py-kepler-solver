@@ -15,3 +15,6 @@ def solve_for_eccentric_anomaly(M,e,accuracy=0.000001):
         newE=oldE-(f(oldE,e,M)/(1-e*math.cos(oldE)))
         oldE=newE
     return newE
+
+def solve_for_mean_anomaly(E,e):
+    return E-e*math.sin(E)
