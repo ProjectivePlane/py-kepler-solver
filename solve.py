@@ -23,7 +23,7 @@ def solve_for_hyperbolic_anomaly(M,e,accuracy=0.000001):
     oldH=M
     newH=0
     while abs(hf(oldH,e,M)>=accuracy):
-        newH=oldH-(hf(oldH,e,M)/(e*math.sinh(oldH)-oldH))
+        newH=oldH-(hf(oldH,e,M)/(e*math.cosh(oldH)-1))
         oldH=newH
     return newH
 
