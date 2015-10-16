@@ -13,6 +13,8 @@ class TestKeplerSolver(unittest.TestCase):
     def test_hyperbolic_anomaly_solver(self):
         self.assertEqual(0.0,solve.solve_for_hyperbolic_anomaly(0,0))
         self.assertEqual(0.0,solve.solve_for_hyperbolic_anomaly(1,1.5))
+        self.assertEqual(1.612685809796164,solve.solve_for_hyperbolic_anomaly(2,1.5))
+        
     def test_mean_anomaly_solver(self):
         self.assertEqual(0.0,solve.solve_for_mean_anomaly(0,0))
         self.assertEqual(0.5792645075960517,solve.solve_for_mean_anomaly(1.0,0.5))
